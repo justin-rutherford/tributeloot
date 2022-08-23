@@ -1,5 +1,5 @@
-## Interface: 80205
-## Author: Euthymius
+## Interface: 90207
+## Author: Euth
 ## Version: @project-version@
 ## Title: TributeLoot |cff7fff7f -Ace3-|r
 ## Notes: Loot management tool
