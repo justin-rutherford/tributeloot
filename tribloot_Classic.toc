@@ -1,0 +1,19 @@
+## Interface: 11404
+## Author: Euth
+## Version: @project-version@
+## Title: TributeLoot
+## Notes: Loot management tool
+## SavedVariables: TLDB
+## Dependencies:
+
+# External Libraries
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+
+# Localization
+locales\enUS.lua
+locales\deDE.lua
+
+# Main
+tribloot.lua
