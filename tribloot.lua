@@ -27,7 +27,7 @@ local defaults = {
       LinkRecipes          = true,
       IgnoredItems         = {},
       MainSpecKeyword      = "in",
-      OffSpecKeyword       = "rot",
+      OffSpecKeyword       = "greed",
       OutKeyword           = "out",
    },
 }
@@ -71,8 +71,8 @@ local options = {
                type = "input",
                order = 2,
                width = "double",
-               name = L["Main Spec Keyword"],
-               desc = L["Enter the keyword players should whisper for main spec loot"],
+               name = L["Need Keyword"],
+               desc = L["Enter the keyword players should whisper for need"],
                get = function()
                   return gtl_CurrentProfileOptions.MainSpecKeyword
                end,
@@ -84,8 +84,8 @@ local options = {
                type = "input",
                order = 3,
                width = "double",
-               name = L["Off Spec Keyword"],
-               desc = L["Enter the keyword players should whisper for off spec loot"],
+               name = L["Greed Keyword"],
+               desc = L["Enter the keyword players should whisper for greed"],
                get = function()
                   return gtl_CurrentProfileOptions.OffSpecKeyword
                end,
@@ -1022,7 +1022,7 @@ function SlashHandler(options)
          self:Print(L["Could not clear previous items."])
       end
    elseif (L["options"] == command) or ("o" == command) then
-      self:ShowConfig()
+      showOptions()
    elseif (L["ignore"] == command) or ("i" == command) then
 
       if (nil == param1) then
@@ -1076,6 +1076,14 @@ function TributeLoot:ShowConfig()
    else
       self:Print(L["Could not show options frame."])
    end
+end
+
+-------------------------------------------------------
+-- Updates the menu GUI with the option changes
+-------------------------------------------------------
+function showOptions()
+   local self = TributeLoot
+   self:ShowConfig()
 end
 
 -------------------------------------------------------

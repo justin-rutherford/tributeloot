@@ -1,6 +1,8 @@
-## Interface: 90207
+## Interface: 100107
 ## Author: Euth
 ## Version: @project-version@
+## IconTexture: 133861
+## AddonCompartmentFunc: ShowOptions
 ## Title: TributeLoot |cff7fff7f -Ace3-|r
 ## Notes: Loot management tool
 ## SavedVariables: TLDB
