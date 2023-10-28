@@ -90,7 +90,7 @@ The person running the mod types /tl results 2
 ```
 <TL> Detailed Results for [Judgement Helmet].
 John second comment overwrites the first
-(Panda) whispering greeding removes me from the Need list automatically
+(Panda) whispering greeding removes me from the need list automatically
 ```
 
 ### Options
