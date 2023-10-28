@@ -20,14 +20,14 @@ local gtl_TributeLootTooltip = nil
 -------------------------------------------------------
 local defaults = {
    profile = {
-      CountdownSeconds     = 60,
+      CountdownSeconds     = 35,
       ItemQualityFilter    = 4,
       ResultsChannel       = "GUILD",
       CustomResultsChannel = "",
       LinkRecipes          = true,
       IgnoredItems         = {},
-      MainSpecKeyword      = "in",
-      OffSpecKeyword       = "greed",
+      MainSpecKeyword      = "n",
+      OffSpecKeyword       = "g",
       OutKeyword           = "out",
    },
 }
@@ -72,7 +72,7 @@ local options = {
                order = 2,
                width = "double",
                name = L["Need Keyword"],
-               desc = L["Enter the keyword players should whisper for need"],
+               desc = L["Enter the keyword players should whisper for Need"],
                get = function()
                   return gtl_CurrentProfileOptions.MainSpecKeyword
                end,
@@ -85,7 +85,7 @@ local options = {
                order = 3,
                width = "double",
                name = L["Greed Keyword"],
-               desc = L["Enter the keyword players should whisper for greed"],
+               desc = L["Enter the keyword players should whisper for Greed"],
                get = function()
                   return gtl_CurrentProfileOptions.OffSpecKeyword
                end,
@@ -656,7 +656,7 @@ function LinkLoot()
 
       --Print item table
       if (#gtl_LinkedItemsTable > 0) then
-         PrintRaidMessage(L["Whisper me \"%s\" or \"%s\" with an item number below (example \"%s 1\")"]:format(gtl_CurrentProfileOptions.MainSpecKeyword, gtl_CurrentProfileOptions.OffSpecKeyword, gtl_CurrentProfileOptions.MainSpecKeyword))
+         PrintRaidMessage(L["Whisper me \"%s\" for Need or \"%s\" for Greed with an item number below (example \"%s 1\")"]:format(gtl_CurrentProfileOptions.MainSpecKeyword, gtl_CurrentProfileOptions.OffSpecKeyword, gtl_CurrentProfileOptions.MainSpecKeyword))
          local message
          for i,v in ipairs(gtl_LinkedItemsTable) do
             message = i .. " -- " .. GetItemLinks(i, true)
@@ -788,8 +788,7 @@ end
 function PrintDetailedResults(index)
    local self = TributeLoot
    local chatType, channel = GetResultsChannel()
-   local resultsMessage
-   local rot
+   local resultMessage
 
    if (true == gtl_IsLootInProgress) then
       self:Print(L["Cannot print results until Last Call."])
@@ -911,7 +910,7 @@ function ProcessWhisper(message, sender, channel, character)
       if (gtl_CurrentProfileOptions.MainSpecKeyword == option) then
          if (nil ~= gtl_LinkedItemsTable[itemIndex]) then
             if (true == AddPlayerToList(gtl_LinkedItemsTable[itemIndex].MainSpecList, gtl_LinkedItemsTable[itemIndex].OffSpecList, character, comment)) then
-               Reply("<" .. TributeLoot.title .. "> " .. L["You were added to the %s list for %s. Whisper me \"%s %d\" to be removed."]:format(L["main spec"], GetItemLinks(itemIndex, false), gtl_CurrentProfileOptions.OutKeyword, itemIndex), channel, sender)
+               Reply("<" .. TributeLoot.title .. "> " .. L["You were added to the %s list for %s. Whisper me \"%s %d\" to be removed."]:format(L["Need"], GetItemLinks(itemIndex, false), gtl_CurrentProfileOptions.OutKeyword, itemIndex), channel, sender)
             end
          else
             Reply("<" .. TributeLoot.title .. "> " .. L["You did not specify a valid item, please try again."], channel, sender)
@@ -919,7 +918,7 @@ function ProcessWhisper(message, sender, channel, character)
       elseif (gtl_CurrentProfileOptions.OffSpecKeyword == option) then
          if (nil ~= gtl_LinkedItemsTable[itemIndex]) then
             if (true == AddPlayerToList(gtl_LinkedItemsTable[itemIndex].OffSpecList, gtl_LinkedItemsTable[itemIndex].MainSpecList, character, comment)) then
-               Reply("<" .. TributeLoot.title .. "> " .. L["You were added to the %s list for %s. Whisper me \"%s %d\" to be removed."]:format(L["off spec"], GetItemLinks(itemIndex, false), gtl_CurrentProfileOptions.OutKeyword, itemIndex), channel, sender)
+               Reply("<" .. TributeLoot.title .. "> " .. L["You were added to the %s list for %s. Whisper me \"%s %d\" to be removed."]:format(L["Greed"], GetItemLinks(itemIndex, false), gtl_CurrentProfileOptions.OutKeyword, itemIndex), channel, sender)
             end
          else
             Reply("<" .. TributeLoot.title .. "> " .. L["You did not specify a valid item, please try again."], channel, sender)
@@ -929,11 +928,11 @@ function ProcessWhisper(message, sender, channel, character)
             local listString = ""
 
             if (true == RemovePlayerFromList(gtl_LinkedItemsTable[itemIndex].MainSpecList, character)) then
-               listString = L["main spec"]
+               listString = L["Need"]
             end
 
             if (true == RemovePlayerFromList(gtl_LinkedItemsTable[itemIndex].OffSpecList, character)) then
-               listString = listString .. L["off spec"]
+               listString = listString .. L["Greed"]
             end
 
             if ("" ~= listString) then
