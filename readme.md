@@ -41,16 +41,17 @@ This command removes items from the ignored items list. Ignored items will not b
 
 ### Examples
 
-Items are linked with a number to the left of them. If someone is interested in winning an item, then whisper "n" or "g" with the item number to need or greed.
+Items are linked with a number to the left of them. If someone is interested in winning an item, then whisper "n" for Need or "g" Greed with the item number.
+
+Players that greed an item will have their names appear in parenthesis. You can change these keywords in the options if you'd prefer different terms.
 
 ![Example Screenshot](https://zombiejunk.s3.amazonaws.com/tributeloot.jpg)
 
 #### Example 1:
-"n" indicates need, while "g" greed. Players that went in for greed will have their names appear in parenthesis. You can change these keywords in the options if you'd prefer different terms.
 
 ```
-John whispers "n 1" to go in on [Eskhandar's Collar] for mainspec
-Jane whispers "g 2" to go in on [Judgement Helmet] for offspec
+John whispers "n 1" to go in on [Eskhandar's Collar] for need
+Jane whispers "g 2" to go in on [Judgement Helmet] for greed
 John changes his mind and whispers "out 1" to be removed from the [Eskhandar's Collar] list.
 Jane changes her mind and whispers "out 2" to be removed from the [Judgement Helmet] list.
 ```
@@ -81,8 +82,8 @@ Players can whisper multiple times to update their comment.
 ```
 John whispers "n 2 first comment"
 John whispers "n 2 second comment overwrites the first"
-Panda whispers "n 2 going mainspec"
-Panda whispers "g 2 greeding removes me from the need list automatically"
+Panda whispers "n 2 might need"
+Panda whispers "g 2 greed automatically removes me from the need list"
 ```
 
 The person running the mod types /tl results 2
@@ -90,7 +91,7 @@ The person running the mod types /tl results 2
 ```
 <TL> Detailed Results for [Judgement Helmet].
 John second comment overwrites the first
-(Panda) whispering greeding removes me from the need list automatically
+(Panda) greed automatically removes me from the need list
 ```
 
 ### Options
