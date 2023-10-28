@@ -1022,7 +1022,7 @@ function SlashHandler(options)
          self:Print(L["Could not clear previous items."])
       end
    elseif (L["options"] == command) or ("o" == command) then
-      showOptions()
+      ShowOptions()
    elseif (L["ignore"] == command) or ("i" == command) then
 
       if (nil == param1) then
@@ -1081,7 +1081,7 @@ end
 -------------------------------------------------------
 -- Updates the menu GUI with the option changes
 -------------------------------------------------------
-function showOptions()
+function ShowOptions()
    local self = TributeLoot
    self:ShowConfig()
 end

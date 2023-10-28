@@ -3,7 +3,7 @@
 ## Version: @project-version@
 ## IconTexture: 133861
 ## AddonCompartmentFunc: ShowOptions
-## Title: TributeLoot |cff7fff7f -Ace3-|r
+## Title: TributeLoot
 ## Notes: Loot management tool
 ## SavedVariables: TLDB
 ## Dependencies:
