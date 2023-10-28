@@ -26,8 +26,8 @@ local defaults = {
       CustomResultsChannel = "",
       LinkRecipes          = true,
       IgnoredItems         = {},
-      MainSpecKeyword      = "n",
-      OffSpecKeyword       = "g",
+      MainSpecKeyword      = "in",
+      OffSpecKeyword       = "rot",
       OutKeyword           = "out",
    },
 }

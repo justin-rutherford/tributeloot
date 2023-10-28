@@ -41,7 +41,7 @@ This command removes items from the ignored items list. Ignored items will not b
 
 ### Examples
 
-Items are linked with a number to the left of them. If someone is interested in winning an item, then whisper "n" for Need or "g" Greed with the item number.
+Items are linked with a number to the left of them. If someone is interested in winning an item, then whisper "in" for Need or "rot" for Greed with the item number.
 
 Players that greed an item will have their names appear in parenthesis. You can change these keywords in the options if you'd prefer different terms.
 
@@ -50,8 +50,8 @@ Players that greed an item will have their names appear in parenthesis. You can 
 #### Example 1:
 
 ```
-John whispers "n 1" to go in on [Eskhandar's Collar] for need
-Jane whispers "g 2" to go in on [Judgement Helmet] for greed
+John whispers "in 1" to go in on [Eskhandar's Collar] for need
+Jane whispers "rot 2" to go in on [Judgement Helmet] for greed
 John changes his mind and whispers "out 1" to be removed from the [Eskhandar's Collar] list.
 Jane changes her mind and whispers "out 2" to be removed from the [Judgement Helmet] list.
 ```
@@ -61,9 +61,9 @@ Players may optionally specify a comment after the item number.
 Giving an item number after /tl results will print the detailed list for a specific item.
 
 ```
-John whispers "n 2 [Lawbringer Helm] is a huge upgrade"
-Jane whispers "n 2 bidding 300 DKP lol"
-Panda whispers "g 2 is a minor upgrade [Lionheart Helm] so whatever"
+John whispers "in 2 [Lawbringer Helm] is a huge upgrade"
+Jane whispers "in 2 bidding 300 DKP lol"
+Panda whispers "rot 2 is a minor upgrade [Lionheart Helm] so whatever"
 ```
 
 The person running the mod types /tl results 2
@@ -76,14 +76,14 @@ Jane bidding 300 DKP lol
 ```
 
 #### Example 3:
-Players can only be on one list at a time, so whispering "n" will remove the player from the "g" list if they exists there and vice versa.
+Players can only be on one list at a time, so whispering "in" will remove the player from the "rot" list if they exists there and vice versa.
 Players can whisper multiple times to update their comment.
 
 ```
-John whispers "n 2 first comment"
-John whispers "n 2 second comment overwrites the first"
-Panda whispers "n 2 might need"
-Panda whispers "g 2 greed automatically removes me from the need list"
+John whispers "in 2 first comment"
+John whispers "in 2 second comment overwrites the first"
+Panda whispers "in 2 might need"
+Panda whispers "rot 2 whispering rot automatically removes me from the in list"
 ```
 
 The person running the mod types /tl results 2
@@ -91,7 +91,7 @@ The person running the mod types /tl results 2
 ```
 <TL> Detailed Results for [Judgement Helmet].
 John second comment overwrites the first
-(Panda) greed automatically removes me from the need list
+(Panda) whispering rot automatically removes me from the in list
 ```
 
 ### Options
