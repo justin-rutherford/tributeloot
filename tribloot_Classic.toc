@@ -1,5 +1,5 @@
 ## Interface: 11404
-## Author: Euth
+## Author: Euth - Sargeras
 ## Version: @project-version@
 ## Title: TributeLoot
 ## Notes: Loot management tool

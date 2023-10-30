@@ -1,5 +1,5 @@
 ## Interface: 100107
-## Author: Euth
+## Author: Euth - Sargeras
 ## Version: @project-version@
 ## IconTexture: 133861
 ## AddonCompartmentFunc: ShowOptions
