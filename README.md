@@ -45,9 +45,10 @@ Items are linked with a number to the left of them. If someone is interested in 
 
 Players that greed an item will have their names appear in parenthesis. You can change these keywords in the options if you'd prefer different terms.
 
-![Example Screenshot](https://zombiejunk.s3.amazonaws.com/tributeloot.jpg)
+![tributeloot](https://github.com/justin-rutherford/tributeloot/assets/11577014/ecaf08a1-a62c-4d15-94f2-ce2dec8cccb5)
 
 #### Example 1:
+
 
 ```
 John whispers "in 1" to go in on [Eskhandar's Collar] for need
@@ -98,7 +99,7 @@ John second comment overwrites the first
 
 The whisper keywords, results channel, and countdown seconds can be customized in the options.
 
-![Options Screenshot](https://zombiejunk.s3.amazonaws.com/tributeloot-options.jpg)
+![tributeloot-options](https://github.com/justin-rutherford/tributeloot/assets/11577014/3e519782-24b5-4de0-b11d-2df429a8f93b)
 
 
 ### External links
