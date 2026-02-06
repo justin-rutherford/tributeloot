@@ -1,8 +1,6 @@
-## Interface: 120000
+## Interface: 50503
 ## Author: Euth - Sargeras
 ## Version: @project-version@
-## IconTexture: 133861
-## AddonCompartmentFunc: ShowOptions
 ## Title: TributeLoot
 ## Notes: Loot management tool
 ## SavedVariables: TLDB
